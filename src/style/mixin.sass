@@ -1,0 +1,10 @@
+@mixin flex-container($justify: null, $align: null, $direction: null)
+	display: flex
+	justify-content: $justify
+	align-items: $align
+	flex-direction: $direction
+
+@mixin responsive-container($sizes...)
+	@each $size, $width in $sizes 
+		@media (max-width: $size)
+			max-width: $width
